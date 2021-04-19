@@ -1,0 +1,40 @@
+@import '../core/variables';
+@import '../core/mixins';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+    background-color: fuchsia;
+    @include tablet {
+        padding: 20px;
+    }
+    &__title {
+        padding: 10px;
+        letter-spacing: 2px;
+        font-family: $fontMain;
+        text-transform: capitalize;
+        font-size: 20px;
+        @include tablet {
+            font-size: 24px;
+        }
+        @include desktop {
+            font-size: 50px;
+        }
+        &--tiltspan {
+            display: inline-block;
+            transform: rotate(-20deg);
+        }
+    }
+    &__subtitle{
+        font-family: $fontMain;
+        font-size: 12px;
+        @include tablet {
+            font-size: 14px;
+        }
+        @include desktop {
+            font-size: 20px;
+        }
+    }
+}
